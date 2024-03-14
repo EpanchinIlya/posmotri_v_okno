@@ -66,7 +66,7 @@ ol {
 position: relative;
 width: 711px;
 height: 386px;
-margin-bottom: 16px;
+margin-bottom: 17px;
 }
 
 .result__video{
@@ -80,9 +80,14 @@ margin-bottom: 16px;
 
 .search-form{
 
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+ 
+display: grid;
+grid-template-columns: 265px 252px auto;
+justify-items: start;
+
+
+
+
 
 }
 
@@ -103,10 +108,12 @@ width: 100%;
 }
 
 .title{
-margin-bottom: 26px;
-font-weight: bold;
+font-family: Oswald, sans-serif;
+margin-bottom: 24px;
+font-weight: 700;
 font-size: 75px;
-line-height: 94%;
+line-height: 93%;
+
 text-transform: uppercase;
 color: white;
 }
@@ -128,7 +135,7 @@ color: white;
 .content__video-card-title{
 
   font-family: Oswald, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
@@ -197,11 +204,49 @@ height: 100%;
   font-size: 18px;
   color: #fff;
   margin-bottom: 5px;
+  
 
 }
 
 
-._visually-hidden {
+.search-form__fieldset{
+/*margin-right: 40px;*/
+border:none;
+
+}
+
+
+
+.search-form__fieldset:nth-child(1)
+{
+  margin-right: 40px;
+ 
+  
+}
+
+
+  
+
+
+.search-form__label{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+ 
+
+}
+
+
+.search-form__checkbox-list{
+
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+
+.visually-hidden {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
@@ -210,3 +255,90 @@ height: 100%;
   clip-path: inset(50%);
   white-space: nowrap;
 } 
+
+
+
+.search-form__textfield{
+border: none;
+background-color: transparent;
+width: 225px;
+font-weight: 400;
+font-size: 18px;
+
+appearance: none;
+
+font-family: inherit; 
+color: inherit;
+border-bottom: 1px solid white;
+border-top: 1px solid white;
+margin-bottom: 1px;
+
+
+}
+
+
+input[type="checkbox"]:disabled {} /* выключённый */
+input[type="checkbox"]:checked {} /* выбранный */
+input[type="checkbox"]:focus-visible {} /* в фокусе */ 
+
+
+.search-form__pseudo-checkbox{
+
+width: 19px;
+height: 19px;
+border: 1px solid white;
+margin-top: 1px;
+}
+
+.search-form__pseudo-checkbox:checked{
+
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+  margin-top: 1px;
+
+  }
+  
+
+
+
+.search-form__label-text{
+
+  margin-left: 5px;
+  margin-right: 15px;
+
+}
+
+
+.button
+{
+  cursor: pointer;
+
+  border: 1px solid #fff;
+ background-color: transparent;
+ font-weight: 700;
+ font-size: 18px;
+ text-align: center;
+ color: #fff;
+ font-family: inherit;
+
+}
+
+
+.search-form__submit-button{
+
+
+  width: 194px;
+  height: 34px;
+  align-self: flex-end;
+ 
+
+
+}
+
+.more-button{
+
+border: 1px solid #fff;
+width: 399px;
+height: 34px;
+}
