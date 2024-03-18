@@ -160,8 +160,8 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   min-height: 103px;
-  object-position: center;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
