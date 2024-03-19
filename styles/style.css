@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -37,11 +40,7 @@ ol {
   list-style: none;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .content {
   display: flex;
@@ -68,7 +67,7 @@ ol {
 
 .search-form {
   display: grid;
-  grid-template-columns: 265px auto auto;
+  grid-template-columns: 264px auto 233px;
   justify-items: start;
 }
 
@@ -84,12 +83,12 @@ ol {
 }
 
 .title {
-  margin-bottom: 19px;
+  margin-bottom: 23px;
   color: white;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 95%;
+  line-height: 91%;
 
   text-transform: uppercase;
 }
@@ -131,13 +130,17 @@ ol {
 }
 
 .content__video-card-title {
-  margin-top: 4px;
+  max-width: 100%;
+  margin-top: 2px;
   margin-bottom: 4px;
+  overflow: hidden;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
 }
 
 .content__video-card-description {
@@ -177,12 +180,11 @@ ol {
 }
 
 .search-form__fieldset {
+  width: 100%;
   border: none;
 }
 
-.search-form__fieldset:nth-child(1) {
-  margin-right: 40px;
-}
+
 
 .search-form__label {
   display: flex;
@@ -195,6 +197,8 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .visually-hidden {
@@ -212,7 +216,7 @@ ol {
   justify-content: center;
   align-items: center;
   width: 225px;
-  margin-bottom: 1px;
+  margin: 1px;
   border: none;
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
@@ -245,7 +249,7 @@ ol {
 
 .search-form__pseudo-checkbox:hover + .search-form__label-text,
 .search-form__label-text:hover {
-  border-bottom: 1px solid white;
+  text-decoration: underline;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
@@ -259,7 +263,9 @@ ol {
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  margin-top: 1px;
+ 
+  margin-right: 5px;
+  margin-left: 1px;
   border: 1px solid white;
 }
 
@@ -271,8 +277,7 @@ ol {
 }
 
 .search-form__label-text {
-  margin-right: 15px;
-  margin-left: 5px;
+  margin-right: 1px;
 }
 
 .button {
@@ -284,6 +289,10 @@ ol {
   text-align: center;
   background-color: transparent;
   cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
 }
 
 .button:active {
